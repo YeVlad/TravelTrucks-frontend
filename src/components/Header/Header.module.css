@@ -1,0 +1,27 @@
+.header_styles {
+  padding: 0 64px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #f7f7f7;
+}
+
+.nav_styles {
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  color: #101828;
+  text-decoration: none;
+}
+
+.active {
+  color: #d84343;
+}
+
+.hidden_element {
+  visibility: hidden;
+}
