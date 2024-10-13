@@ -7,13 +7,12 @@ import { selectTracks } from "../../redux/tracks/selectors";
 
 const CatalogPage = () => {
   const fetchedTracks = useSelector(selectTracks);
-  console.log(fetchedTracks.items);
 
   return (
     <section className={css.catalog}>
       <FiltersForm />
-      {fetchedTracks.items ? (
-        <FoundItems fetchedTracks={fetchedTracks.items} />
+      {fetchedTracks.length > 0 ? (
+        <FoundItems fetchedTracks={fetchedTracks} />
       ) : (
         <p>Wait</p>
       )}

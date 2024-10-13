@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import css from "./TruckItem.module.css";
 
 const TruckItem = ({ car }) => {
@@ -96,7 +97,12 @@ const TruckItem = ({ car }) => {
             </li>
           )}
         </ul>
-        <button className={css.show_more_button}>Show more</button>
+        <NavLink
+          to={`/catalog/${car.id}/features`}
+          className={css.show_more_button}
+        >
+          Show more
+        </NavLink>
       </div>
     </li>
   );

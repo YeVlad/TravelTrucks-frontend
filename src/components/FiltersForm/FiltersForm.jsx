@@ -2,6 +2,7 @@ import { Formik, Form, Field } from "formik";
 import { fetchNewTracks } from "../../redux/tracks/operations";
 import css from "./FiltersForm.module.css";
 import { useDispatch } from "react-redux";
+import { changeFilter } from "../../redux/filters/slice";
 
 const FiltersForm = () => {
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ const FiltersForm = () => {
       TV: values.TV ? true : "",
       bathroom: values.bathroom ? true : "",
     };
+    dispatch(changeFilter(modifiedValues));
 
     dispatch(fetchNewTracks(modifiedValues));
   };
@@ -166,6 +168,19 @@ const FiltersForm = () => {
                     <use xlinkHref="/src/assets/sprite.svg#icon-bi_grid-3x3-gap"></use>
                   </svg>
                   <span className={css.checkbox_label}>Alcove</span>
+                </span>
+              </label>
+            </div>
+            <div className={css.checkbox}>
+              <label className={css.checkbox_wrapper}>
+                <Field
+                  type="radio"
+                  className={css.checkbox_input}
+                  name="form"
+                  value=""
+                />
+                <span className={css.checkbox_tile}>
+                  <span className={css.checkbox_label}>Any</span>
                 </span>
               </label>
             </div>

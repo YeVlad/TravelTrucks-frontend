@@ -7,11 +7,44 @@ export const fetchNewTracks = createAsyncThunk(
   "tracks/getNew",
   async (filtres, thunkAPI) => {
     try {
-      console.log(filtres);
-
-      const params = new URLSearchParams(filtres).toString();
+      const params = new URLSearchParams({
+        ...filtres,
+        page: 1,
+        limit: 5,
+      }).toString();
 
       const response = await axios.get(`/campers?${params}`);
+
+      return response.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
+
+export const fetchNextTracks = createAsyncThunk(
+  "tracks/getNext",
+  async (params, thunkAPI) => {
+    try {
+      const paramsSearch = new URLSearchParams({
+        ...params,
+        limit: 5,
+      }).toString();
+
+      const response = await axios.get(`/campers?${paramsSearch}`);
+
+      return response.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
+
+export const fetchById = createAsyncThunk(
+  "tracks/byId",
+  async (id, thunkAPI) => {
+    try {
+      const response = await axios.get(`/campers/${id}`);
 
       return response.data;
     } catch (e) {
