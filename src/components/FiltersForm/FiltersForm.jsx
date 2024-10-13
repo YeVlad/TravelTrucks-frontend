@@ -11,9 +11,9 @@ const FiltersForm = () => {
       ...values,
       AC: values.AC ? true : "",
       transmission: values.transmission ? "automatic" : "",
-      kitchen: values.Kitchen ? true : "",
+      kitchen: values.kitchen ? true : "",
       TV: values.TV ? true : "",
-      bathroom: values.Bathroom ? true : "",
+      bathroom: values.bathroom ? true : "",
     };
 
     dispatch(fetchNewTracks(modifiedValues));
@@ -77,7 +77,7 @@ const FiltersForm = () => {
                 <Field
                   type="checkbox"
                   className={css.checkbox_input}
-                  name="Kitchen"
+                  name="kitchen"
                 />
                 <span className={css.checkbox_tile}>
                   <svg className={css.icon}>
@@ -107,7 +107,7 @@ const FiltersForm = () => {
                 <Field
                   type="checkbox"
                   className={css.checkbox_input}
-                  name="Bathroom"
+                  name="bathroom"
                 />
                 <span className={css.checkbox_tile}>
                   <svg className={css.icon}>
