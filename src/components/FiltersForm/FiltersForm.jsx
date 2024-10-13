@@ -143,7 +143,7 @@ const FiltersForm = () => {
                   type="radio"
                   className={css.checkbox_input}
                   name="form"
-                  value="vullyIntegrated"
+                  value="fullyIntegrated"
                 />
                 <span className={css.checkbox_tile}>
                   <svg className={css.icon}>
