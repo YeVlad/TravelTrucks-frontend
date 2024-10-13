@@ -9,6 +9,7 @@ body {
   height: 100%; /* Задаємо висоту 100% для html та body */
   margin: 0; /* Скидаємо стандартні відступи */
   padding: 0; /* Скидаємо стандартні поля */
+  font-family: "Inter", sans-serif;
 }
 
 #root {

@@ -16,6 +16,9 @@
 nav a {
   color: #101828;
   text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .active {
@@ -24,4 +27,11 @@ nav a {
 
 .hidden_element {
   visibility: hidden;
+}
+
+.logo {
+  width: 136px;
+  height: 16px;
+
+  margin: 28px 0;
 }

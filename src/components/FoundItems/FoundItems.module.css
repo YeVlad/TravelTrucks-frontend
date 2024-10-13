@@ -1,0 +1,13 @@
+.list_container {
+  width: 888px;
+}
+
+.list_of_cars {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}

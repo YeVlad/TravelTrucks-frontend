@@ -5,7 +5,9 @@ import css from "./Header.module.css";
 export const Header = () => {
   return (
     <header className={css.header_styles}>
-      <p>LOGO </p>
+      <svg className={css.logo}>
+        <use xlinkHref="/src/assets/sprite.svg#icon-Logo"></use>
+      </svg>
       <nav className={css.nav_styles}>
         <NavLink
           to="/"
@@ -21,7 +23,9 @@ export const Header = () => {
         </NavLink>
       </nav>
       <div className={css.hidden_element}>
-        <p>LOGO</p>
+        <svg className={css.logo}>
+          <use xlinkHref="/src/assets/sprite.svg#icon-Logo"></use>
+        </svg>
       </div>
     </header>
   );
