@@ -64,10 +64,5 @@ const tracksSlice = createSlice({
   },
 });
 
-// export const {
-//   fetchingEventsInProgress,
-//   fetchingEventsSuccess,
-//   fetchingEventsError,
-// } = filtersSlice.actions;
 
 export const tracksReducer = tracksSlice.reducer;

@@ -14,7 +14,7 @@
   align-items: start;
   flex-wrap: wrap;
   gap: 8px;
-  height: 104px;
+  min-height: 104px;
   margin-bottom: 100px;
 }
 

@@ -142,34 +142,6 @@ const Features = () => {
           <p className={css.detail}>Consumption</p>
           <p className={css.detail}>{car.consumption}</p>
         </li>
-        <li className={css.text_detail}>
-          <p className={css.detail}>Engine</p>
-          <p className={css.detail}>{car.engine}</p>
-        </li>
-        {car.gas && (
-          <li className={css.text_detail}>
-            <p className={css.detail}>Gas</p>
-            <p className={css.detail}>Yes</p>
-          </li>
-        )}
-        {car.microwave && (
-          <li className={css.text_detail}>
-            <p className={css.detail}>Microwave</p>
-            <p className={css.detail}>Yes</p>
-          </li>
-        )}
-        {car.refrigerator && (
-          <li className={css.text_detail}>
-            <p className={css.detail}>Refrigerator</p>
-            <p className={css.detail}>Yes</p>
-          </li>
-        )}
-        {car.water && (
-          <li className={css.text_detail}>
-            <p className={css.detail}>Water</p>
-            <p className={css.detail}>Yes</p>
-          </li>
-        )}
       </ul>
     </div>
   );

@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 
 import HomePage from "./pages/HomePage/HomePage";
 import CatalogItemPage from "./pages/CatalogItempage/CatalogItempage";
@@ -21,6 +21,14 @@ function App() {
             <Route path="features" element={<Features />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
+          <Route
+            path="*"
+            element={
+              <>
+                <p>NotFound</p> <NavLink to="/">Home</NavLink>
+              </>
+            }
+          />
         </Routes>
       </main>
     </div>

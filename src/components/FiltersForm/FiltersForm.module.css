@@ -10,14 +10,6 @@
   color: #6c717b;
 }
 
-.location_field {
-  border: none;
-  background-color: #f7f7f7;
-  border-radius: 12px;
-  height: 56px;
-  margin: 0 0 40px 0;
-}
-
 .word_filters {
   font-weight: 500;
   margin: 0 0 32px 0;
@@ -129,4 +121,31 @@
   height: 32px;
   fill: #101828;
   margin-bottom: 8px;
+}
+
+.location_div {
+  /* display: flex;
+  align-items: center; */
+  position: relative;
+}
+
+.map_field_icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+
+  top: 18px;
+  left: 20px;
+}
+
+.location_field {
+  border: none;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  height: 56px;
+  margin: 0 0 40px 0;
+
+  padding-left: 50px;
+  width: 100%;
 }
