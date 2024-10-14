@@ -8,7 +8,7 @@ const GeneralOverview = ({ car }) => {
         <svg className={css.star_icon}>
           <use xlinkHref="/src/assets/sprite.svg#icon-star"></use>
         </svg>
-        <p className={css.info}>
+        <p className={[css.info, css.underlined].join(" ")}>
           {car.rating}({car.reviews.length} Reviews)
         </p>
         <svg className={css.map_icon}>

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchNewTracks, fetchNextTracks, fetchById } from "./operations";
 
-const filtersSlice = createSlice({
+const tracksSlice = createSlice({
   name: "tracks",
   initialState: {
     items: [],
@@ -70,4 +70,4 @@ const filtersSlice = createSlice({
 //   fetchingEventsError,
 // } = filtersSlice.actions;
 
-export default filtersSlice.reducer;
+export const tracksReducer = tracksSlice.reducer;

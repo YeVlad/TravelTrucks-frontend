@@ -1,6 +1,10 @@
 import { NavLink } from "react-router-dom";
 import css from "./TruckItem.module.css";
 
+import { changeLikes } from "../../redux/likes/slice";
+import { selectLikes } from "../../redux/likes/selectors";
+import { useDispatch, useSelector } from "react-redux";
+
 const TruckItem = ({ car }) => {
   const mainPhoto = car.gallery[0].original;
   const isAC = car.AC;
@@ -11,6 +15,14 @@ const TruckItem = ({ car }) => {
   const isRadio = car.radio;
   const isPetrol = car.engine;
 
+  const dispatch = useDispatch();
+
+  const likes = useSelector(selectLikes);
+  const isLiked = likes.includes(car.id);
+
+  const likeCar = () => {
+    dispatch(changeLikes(car.id));
+  };
   return (
     <li className={css.car_card}>
       <img src={mainPhoto} alt="Track photo" className={css.car_photo} />
@@ -19,8 +31,12 @@ const TruckItem = ({ car }) => {
           <h2 className={css.car_name}>{car.name}</h2>
           <div className={css.heart_and_price}>
             <h2 className={css.car_price}>€{car.price}.00</h2>
-            <button className={css.button_like}>
-              <svg className={css.icon}>
+            <button className={css.button_like} onClick={likeCar}>
+              <svg
+                className={
+                  isLiked ? [css.icon, css.liked_icon].join(" ") : css.icon
+                }
+              >
                 <use xlinkHref="/src/assets/sprite.svg#icon-Property-1Default"></use>
               </svg>
             </button>

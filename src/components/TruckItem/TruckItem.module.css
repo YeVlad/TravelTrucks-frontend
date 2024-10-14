@@ -69,6 +69,11 @@
 .icon {
   width: 26px;
   height: 26px;
+  fill: #101828;
+}
+
+.liked_icon {
+  fill: #e44848;
 }
 
 .reviews_and_location {

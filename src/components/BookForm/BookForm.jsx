@@ -4,8 +4,6 @@ import toast, { Toaster } from "react-hot-toast";
 
 const BookForm = () => {
   const handleSendBook = (values, actions) => {
-    console.log(values.name.trim().length);
-
     if (values.name.trim().length == 0) {
       const notify = () => toast("Enter your name pls");
       notify();
@@ -65,7 +63,7 @@ const BookForm = () => {
           <Field
             as="textarea"
             name="comment"
-            placeholder="Comment date"
+            placeholder="Comment"
             className={css.form_textarea}
           ></Field>
           <button className={css.book_button} type="submit">
