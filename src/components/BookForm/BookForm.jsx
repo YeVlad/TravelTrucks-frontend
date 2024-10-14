@@ -3,7 +3,7 @@ import css from "./BookForm.module.css";
 import toast, { Toaster } from "react-hot-toast";
 
 const BookForm = () => {
-  const handleSendBook = (values) => {
+  const handleSendBook = (values, actions) => {
     console.log(values.name.trim().length);
 
     if (values.name.trim().length == 0) {
@@ -26,9 +26,10 @@ const BookForm = () => {
         `Name: ${values.name}
         Email: ${values.email}
         Date: ${values.date}
-        We just get your message!`
+        We just got your message!`
       );
     notify();
+    actions.resetForm();
   };
   return (
     <>
@@ -61,11 +62,12 @@ const BookForm = () => {
             className={css.form_field}
             placeholder="Booking date*"
           ></Field>
-          <textarea
+          <Field
+            as="textarea"
             name="comment"
             placeholder="Comment date"
             className={css.form_textarea}
-          ></textarea>
+          ></Field>
           <button className={css.book_button} type="submit">
             Send
           </button>

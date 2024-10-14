@@ -8,13 +8,17 @@ const DetailedInfo = () => {
       <div className={css.local_navigation}>
         <NavLink
           to="features"
-          className={({ isActive }) => (isActive ? css.active : "")}
+          className={({ isActive }) =>
+            isActive ? [css.activeSubLink, css.subLink].join(" ") : css.subLink
+          }
         >
           Features
         </NavLink>
         <NavLink
           to="reviews"
-          className={({ isActive }) => (isActive ? css.active : "")}
+          className={({ isActive }) =>
+            isActive ? [css.activeSubLink, css.subLink].join(" ") : css.subLink
+          }
         >
           Reviews
         </NavLink>
