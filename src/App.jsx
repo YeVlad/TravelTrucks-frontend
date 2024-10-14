@@ -2,7 +2,7 @@ import "./App.css";
 import { Routes, Route, NavLink } from "react-router-dom";
 
 import HomePage from "./pages/HomePage/HomePage";
-import CatalogItemPage from "./pages/CatalogItempage/CatalogItempage";
+import CatalogItemPage from "./pages/CatalogItemPage/CatalogItemPage";
 import CatalogPage from "./pages/Catalogpage/Catalogpage";
 
 import Header from "./components/Header/Header";
