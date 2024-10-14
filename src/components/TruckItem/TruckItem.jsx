@@ -15,6 +15,11 @@ const TruckItem = ({ car }) => {
   const isRadio = car.radio;
   const isPetrol = car.engine;
 
+  const isRefrigerator = car.isRefrigerator;
+  const isWater = car.water;
+  const isGas = car.gas;
+  const isMicrowave = car.microwave;
+
   const dispatch = useDispatch();
 
   const likes = useSelector(selectLikes);
@@ -107,9 +112,41 @@ const TruckItem = ({ car }) => {
           {isBathroom && (
             <li className={css.feature}>
               <svg className={css.feature_icon}>
-                <use xlinkHref="/src/assets/sprite.svg#icon-bi_droplet"></use>
+                <use xlinkHref="/src/assets/sprite.svg#icon-ph_shower"></use>
               </svg>
               <p className={css.feature_name}>Bathroom</p>
+            </li>
+          )}
+          {isRefrigerator && (
+            <li className={css.feature}>
+              <svg className={css.feature_icon}>
+                <use xlinkHref="/src/assets/sprite.svg#icon-solar_fridge-outline"></use>
+              </svg>
+              <p className={css.feature_name}>Refrigerator</p>
+            </li>
+          )}
+          {isWater && (
+            <li className={css.feature}>
+              <svg className={css.feature_icon}>
+                <use xlinkHref="/src/assets/sprite.svg#icon-bi_droplet"></use>
+              </svg>
+              <p className={css.feature_name}>Water</p>
+            </li>
+          )}
+          {isGas && (
+            <li className={css.feature}>
+              <svg className={css.feature_icon}>
+                <use xlinkHref="/src/assets/sprite.svg#icon-hugeicons_gas-stove"></use>
+              </svg>
+              <p className={css.feature_name}>Gas</p>
+            </li>
+          )}
+          {isMicrowave && (
+            <li className={css.feature}>
+              <svg className={css.feature_icon}>
+                <use xlinkHref="/src/assets/sprite.svg#icon-lucide_microwave"></use>
+              </svg>
+              <p className={css.feature_name}>Microwave</p>
             </li>
           )}
         </ul>

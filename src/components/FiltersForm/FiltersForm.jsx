@@ -113,7 +113,7 @@ const FiltersForm = () => {
                 />
                 <span className={css.checkbox_tile}>
                   <svg className={css.icon}>
-                    <use xlinkHref="/src/assets/sprite.svg#icon-bi_droplet"></use>
+                    <use xlinkHref="/src/assets/sprite.svg#icon-ph_shower"></use>
                   </svg>
                   <span className={css.checkbox_label}>Bathroom</span>
                 </span>

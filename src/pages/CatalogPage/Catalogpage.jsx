@@ -1,4 +1,4 @@
-import {  useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import FiltersForm from "../../components/FiltersForm/FiltersForm";
 import FoundItems from "../../components/FoundItems/FoundItems";
 import css from "./CatalogPage.module.css";
@@ -6,8 +6,6 @@ import css from "./CatalogPage.module.css";
 import { selectTracks } from "../../redux/tracks/selectors";
 
 const CatalogPage = () => {
-  
-
   const fetchedTracks = useSelector(selectTracks);
 
   return (
@@ -16,7 +14,7 @@ const CatalogPage = () => {
       {fetchedTracks.length > 0 ? (
         <FoundItems fetchedTracks={fetchedTracks} />
       ) : (
-        <p>Wait</p>
+        <div className={css.empty_space}></div>
       )}
     </section>
   );
