@@ -3,7 +3,7 @@ import { Routes, Route, NavLink } from "react-router-dom";
 
 import HomePage from "./pages/HomePage/HomePage";
 import CatalogItemPage from "./pages/CatalogItemPage/CatalogItemPage";
-import CatalogPage from "./pages/Catalogpage/Catalogpage";
+import CatalogPage from "./pages/CatalogPage/CatalogPage";
 
 import Header from "./components/Header/Header";
 import Features from "./components/Features/Features";
